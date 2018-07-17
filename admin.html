@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Ashesi Page</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/bootstrap-social.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+
+ <style>
+  fieldset {background:lightyellow; border:10px solid yellow; margin-bottom:10px; width: 100%; }
+  label{width: 180px; display:inline-block; text-align: right; text-align: top;}
+  .gen{width: auto;}
+  .cont{width: auto;}
+  .hei{text-align: center;}
+  .sal{text-align: center;}
+  textarea{width: 360px;height:50px;}
+  label:hover{font-size: 20px;}
+  input:hover{font-size: 20px;}
+
+  
+
+  </style>   
+</head>
+<body>
+	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container-fluid" style="background:white;" width="100%">
+         <div class="navbar-header">
+           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+             <span class="sr-only">Toggle navigation</span>
+             <span class="icon-bar"></span>
+             <span class="icon-bar"></span>
+             <span class="icon-bar"></span>
+             <span class="icon-bar"></span>
+           	
+           </button>
+           <!-- <div class="col-sm-offset-4"> -->
+           <a class="navbar-brand " href="" ><img src="logo.jpg" height="36" width="48"></a>
+         </div>
+         <div id="navbar" class="navbar-collapse collapse ">
+         	<ul class="nav navbar-nav col-sm-offset-5"  >
+         		<li ><a href="ashesi.html">
+         		<span aria-hidden="true"></span> Home</a></li>
+         		
+         		<li class="dropdown"><a href="about.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span  aria-hidden="true"></span>About<span ></span></a>
+         		<ul class="dropdown-menu">
+         		  <li><a href="about.html">Ashesi</a></li>
+         		  <li><a href="campus.html">Our campus</a></li>
+         		  <li><a href="#">Leadership</a></li>
+         		  <li><a href="#">Jobs</a></li>
+         		  <li><a href="#">Administration</a></li>
+         		  <li><a href="#">Climate Innovation Centre </a></li>
+         			
+         		</ul>
+         		</li>
+
+         		<li class="active" class="dropdown"><a href="admin.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span aria-hidden="true"></span> Admissions<span></span></a>
+            <ul class="dropdown-menu">
+            <li><a href="#" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModalNorm" role="button">Apply</a></li>
+              
+            </ul>
+            </li>
+         		<li><a href="academics.html"><span aria-hidden="true"></span>Academics</a></li>
+         	
+            </ul>
+            <div class="col-sm-3 col-md-3 pull-right">
+        <form class="navbar-form" role="search">
+        <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search" name="srch-term" id="srch-term">
+            <div class="input-group-btn">
+                <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+            </div>
+        </div>
+        </form>
+        </div> 
+      </div>
+      </div>
+      </nav>
+
+      <!-- <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModalNorm">
+    Launch Normal Form
+</button> -->
+
+<!-- Modal -->
+<div class="modal fade" id="myModalNorm" tabindex="-1" role="dialog" 
+     aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+            
+                <button type="button" class="close" 
+                   data-dismiss="modal">
+                       <span aria-hidden="true">&times;</span>
+                       <span class="sr-only">Close</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel">
+                    Application Form 
+                </h4>
+            </div>
+            
+            <!-- Modal Body -->
+            <div class="modal-body">
+
+
+            <form method="post" enctype="multipart/time-data" action="https://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php">
+  <fieldset>
+    <legend>Your Face</legend>
+    <label for="fileToUpload">Your Image:</label>     
+    <input type="file" id="fileToUpload" name="fileToUpload" required><br>
+     <label for="preview">Image Preview:</label><br>
+     <img src="" id="preview" required><br>
+  </fieldset>
+
+  <fieldset>
+    <legend>Your General Details</legend>
+     <label for="yourname">Name:</label>
+     <input type="text" id="yourname" name="yourname" placeholder="Your full name" required> <br>
+     <label for="gender" class="gen">Gender:</label>
+     <input type="radio" name="gender" value="male" required>Male
+     <input type="radio" name="gender" value="female" required>Female </br>
+     <label for="age">Age:</label>
+     <input type="number" id="age" id="age" name="age" min="1" required> <br>
+     <label for="dateofbirth">Date of Birth:</label>
+     <input type="date" id="dateofbirth" name="dateofbirth" value="dd/mm/yyyy"> <br>
+     <label for="color">Favorite Color:</label>
+     <input type="color" id="color" name="color"> <br>
+     <label for="country">Which Country:</label>
+     <select name="country" no selection>
+       <option value="ke">Kenya</option>
+       <option value="us">USA</option>
+       <option value="br">Britain</option>
+       <option value="ch">China</option>
+       <option value="fr">France</option>
+       <option value="rw">Rwanda</option>
+      
+     </select>
+     </fieldset>
+     <fieldset>
+       <legend>Course</legend>
+       <label for="course">Intended Major:</label>
+       <select name="course" no selection>
+       <option value="cs">Computer Science</option>
+       <option value="ba">Business Administration</option>
+       <option value="mis">Management Information Systems</option>
+       <option value="ce">Computer Engineering</option>
+       <option value="me">Mechanical Engineering</option>
+       <option value="eec">Electrical and Electronic Engineering</option>
+         
+       </select>
+
+
+     </fieldset>
+
+  
+  <fieldset>
+    <legend>Your Indicators</legend>
+    <label for="height" >Height:</label>
+    Short <input type="range" min="0" max="100" id="height" name="height" class="hei">Tall
+    <!-- label for="salary" >Salary:</label>
+    Poor <input type="range" min="0" max="100" id="salary" name="salary" class="sal">Rich<br> -->
+  </fieldset>
+  <fieldset>
+    <legend>Your Contact Information</legend>
+    <label for="mail">Email:</label>
+    <input type="email" id="mail" name="mail" required> <br>
+    <label for="tel">Mobile:</label>
+    <input type="tel" id="tel" name="tel"> <br>
+    <label for="address">Address:</label>
+    <textarea name="address"></textarea> <br>
+     <label for="contact" class="cont">Method to Contact you:</label>
+     <input type="checkbox" name="contact" value="mail" required>Email
+     <input type="checkbox" name="contact" value="app" required>Whatsapp 
+     <input type="checkbox" name="contact" value="chat" required>In-app chat <br>
+
+  </fieldset>
+  <input type="submit" value="Submit">
+  <div class="modal-footer">
+                <button type="button" class="btn btn-default"
+                        data-dismiss="modal">
+                            Close
+                </button>
+                <button type="button" class="btn btn-primary">
+                    Save changes
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+ </form>
+ <script src="https://www.cse.ust.hk/~rossiter/dating_web_site.js"></script>
+                
+
+                
+                
+            </div>
+            
+
+<div class="container-fluid">
+  <div class="row row-content">
+       <div class="col-xs-12">
+        <div id="mycarousel" class="carousel slide" data-ride="carousel">
+
+        <ol class="carousel-indicators">
+          <li data-target="#mycarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#mycarousel" data-slide-to="1"></li>
+          <li data-target="#mycarousel" data-slide-to="2"></li>
+          <li data-target="#mycarousel" data-slide-to="3"></li>
+          <li data-target="#mycarousel" data-slide-to="4"></li>
+          
+        </ol>
+
+        <div class="carousel-inner" role="listbox">
+           <div class="item active">
+            <img src="view.jpg" width="1100" height="300">
+            <div class="carousel-caption">
+              <p style="padding:20px;"></p>
+                 <div class="alert alert-warning alert-dismissible" role="alert">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span></button>
+                        See it for yourself. Get a view of our beautiful campus. !!!
+                    </div>
+            </div>
+           </div>
+
+           <div class="item">
+             <img src="img5.jpg" width="1100" height="300">
+             <div class="carousel-caption">
+              <p style="padding:20px;"></p>
+                 <div class="alert alert-warning alert-dismissible" role="alert">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span></button>
+                        Help us welcome our new Provost, Dr. Suzanne Buchele, who first visited Ashesi in 2006 as the university's first Fullbright Scholar.
+                    </div>
+            </div>
+           </div>
+           <div class="item">
+             <img src="view5.jpg" width="1100" height="300">
+             <div class="carousel-caption">
+              <p style="padding:20px;"></p>
+                 <div class="alert alert-warning alert-dismissible" role="alert">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span></button>
+                        The learning environment!!!
+                    </div>
+            </div>
+           </div>
+
+           <div class="item">
+             <img src="img6.jpg" width="1100" height="300">
+             <div class="carousel-caption">
+              <p style="padding:20px;"></p>
+                 <div class="alert alert-warning alert-dismissible" role="alert">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span></button>
+                        Students with a cumulative GPA of 3.85, or higher, for all undergraduate work, graduate with a Summa Cum Laude (highest honours)!!!
+                    </div>
+            </div>
+           </div>
+
+           <div class="item">
+              <img src="img4.jpg" width="1100" height="300">
+              <div class="carousel-caption">
+              <p style="padding:20px;"></p>
+                 <div class="alert alert-warning alert-dismissible" role="alert">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span></button>
+                        Alumna Sarah-Michelle Mills '07, Lead Specialist for Market Development at GE Ghana, reflects on the enduring lessons of her Ashesi education!!!
+                    </div>
+            </div>
+           </div>
+        </div>      
+        <a class="left carousel-control" href="#mycarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+            
+        </a>
+        <a class="right carousel-control" href="#mycarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+            
+        </a>
+        
+        </div>            
+          
+     </div>
+  </div>
+ <div class="row row-content">
+   <div class="col-sm-3 col-sm-offset-2">
+   <span><h3>Top Stories</h3></span>
+     <div class="media">
+         <div class="media-left media-middle"><a href="#"><img class="media-object img-thumbnail" src="img3.jpg" width="120" height="120"></a></div>
+      <div  class="media-body">
+       <div class="comment">
+         <p><p>Between the three of them, brothers Emile, Delali and Kafui... </p></div>
+         <button onclick="myFunction()">More</button>
+<!--                 <p><a class="btn btn-primary btn-xs" href="#">More &raquo;</a></p>  -->
+      </div>
+    </div>
+  </div>
+    <div class="col-sm-3 col-sm-offset-2">
+    <span><h3></h3></span><br>
+      <div class="media">
+         <div class="media-left media-middle"><a href="#"><img class="media-object img-thumbnail" src="img4.jpg" width="120" height="120"></a></div>
+      <div  class="media-body">
+       <span >
+       <div class="comment">
+         <p><p>"In retrospect, my time at Ashesi taught me some of career lessons...</p></div>
+                <!-- <p><a class="btn btn-primary btn-xs" href="#">More &raquo;</a></p> --> 
+                                <button onclick="FunctionOne()">More</button>
+                </p></span>
+
+      </div>
+    </div>
+
+    </div>
+  </div>  
+</div> 
+    <footer class="row-footer">
+        <div class="container">
+            <div class="row">             
+                <div class="col-xs-5 col-xs-offset-1 col-sm-2 col-sm-offset-1">
+                    <h5>Resources</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Web Mail</a></li>
+                        <li><a href="#">Academic Calendar</a></li>
+                        <li><a href="#">Events Calendar</a></li>
+                        <li><a href="#">Ashesi's Campus</a></li>
+                    </ul>
+                </div>
+                <div class="col-xs-6 col-sm-5">
+                    <h5>Our Address</h5>
+                    <address>
+		              1 University Avenue, Berekuso<br>
+		              PMB CT 3, Cantonments, <br>
+		              Accra, Ghana<br>
+		             <i class="fa fa-phone"></i>: +233302610330<br>
+		              <i class="fa fa-fax"></i>: +233302610330<br>
+		              <i class="fa fa-envelope"></i>: <a href="mailto:ashesi.edu.gh">ashesi.edu.gh</a>
+		           </address>
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                    <div class="nav navbar-bar" style="padding: 40px 10px;">
+                        <a class="btn btn-social-icon btn-google-plus" href="http://google.com/+"><i class="fa fa-google-plus"></i></a>
+                        <a class="btn btn-social-icon btn-facebook" href="http://www.facebook.com/profile.php?id="><i class="fa fa-facebook"></i></a>
+                        <a class="btn btn-social-icon btn-linkedin" href="http://www.linkedin.com/in/"><i class="fa fa-linkedin"></i></a>
+                        <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i class="fa fa-twitter"></i></a>
+                        <a class="btn btn-social-icon btn-youtube" href="http://youtube.com/"><i class="fa fa-youtube"></i></a>
+                        <a class="btn btn-social-icon" href="mailto:ashesi.edu.gh"><i class="fa fa-envelope-o"></i></a>
+                    </div>
+                </div>
+                <div class="col-sm-12">
+                    <p style="padding:10px;"></p>
+                    <p align=center>© Ashesi University College. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    <script src="js/bootstrap.min.js"></script>
+     
+    <script>
+      $('.toggle').click(function (event) {
+         event.preventDefault();
+         var target = $(this).attr('href');
+     $(target).toggleClass('hidden show');
+});
+    </script> 
+<script>
+
+    function myFunction() {
+    window.open("http://www.ashesi.edu.gh/stories-and-events/2257-a-family-s-values-the-ashesi-way.html");
+}
+</script>
+<script >
+  function FunctionOne() {
+    window.open("http://www.ashesi.edu.gh/stories-and-events/2258-alumna-sarah-michelle-reflects-on-career.html");
+  }
+  
+</script>    
+
+</body>
+</html>
